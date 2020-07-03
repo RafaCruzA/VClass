@@ -29,7 +29,7 @@ function imageReady(){
 
 function setup(){
     createCanvas(640, 480);
-    vehiculoPrueba = createImg('Images\\00001.jpg', imageReady);
+    vehiculoPrueba = createImg('img\\00001.jpg', imageReady);
     background(0);
     mobilenet = ml5.imageClassifier('Mobilenet', modelReady);
 
