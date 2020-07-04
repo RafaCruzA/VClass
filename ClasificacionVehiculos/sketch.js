@@ -1,5 +1,5 @@
+let error;
 let mobilenet;
-
 let vehiculoPrueba;
 
 function modelReady(){
@@ -16,7 +16,7 @@ function gotResults(error, results){
         let prob = results[0].probability;
         fill(0);
         textSize(10); //64
-        text(label, 10, height - 100);
+        text(label, 10, height - 50);
         createP(label);
         createP(prob);
     }
@@ -29,8 +29,8 @@ function imageReady(){
 
 function setup(){
     createCanvas(640, 480);
-    vehiculoPrueba = createImg('img\\00001.jpg', imageReady);
-    background(0);
+    vehiculoPrueba = createImg('img/00002.jpg', imageReady);
+    background(10);
     mobilenet = ml5.imageClassifier('Mobilenet', modelReady);
 
 }
